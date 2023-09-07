@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>EDDIE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="hero">
+    <h1 data-testid="slackUserName">EDOZIE PASCAL</h1>
+    <h1 data-testid="myTrack">FRONT-END</h1>
+        <img src="images/myphoto.JPG" alt="EDDIE" class="menu-img">
+        <div id="clock">
+    <p id="day" data-testid="currentDayOfTheWeek"></p>
+    <p id="time" data-="CurrentUtcTime"></p>
+    <a href="" data-testid="githubUrl">git repo</a>
+  </div>     
+   </div> 
+
+
+  <script>
+    function updateClock() {
+      const clockElement = document.getElementById('clock');
+      const dayElement = document.getElementById('day');
+      const timeElement = document.getElementById('time');
+
+      const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const now = new Date();
+      const dayOfWeek = daysOfWeek[now.getDay()];
+      const time = now.toLocaleTimeString();
+
+      dayElement.textContent = `Today is ${dayOfWeek}`;
+      timeElement.textContent = `Current time is ${time}`;
+    }
+
+    // Update the clock every second (1000 milliseconds)
+    setInterval(updateClock, 1000);
+
+    // Initial update
+    updateClock();
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    background: #82a6ee;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+.menu-img{
+margin-left: 35%;
+margin-top: 50px;
+    
+}
