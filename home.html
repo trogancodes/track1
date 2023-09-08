@@ -20,25 +20,21 @@
 
 
   <script>
-    function updateClock() {
-      const clockElement = document.getElementById('clock');
-      const dayElement = document.getElementById('day');
-      const timeElement = document.getElementById('time');
+    function updateMyClock() {
+      const clock = document.getElementById('clock');
+      const day = document.getElementById('day');
+      const times = document.getElementById('time');
 
       const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       const now = new Date();
       const dayOfWeek = daysOfWeek[now.getDay()];
       const time = now.toLocaleTimeString();
 
-      dayElement.textContent = `Today is ${dayOfWeek}`;
-      timeElement.textContent = `Current time is ${time}`;
+      day.textContent = `Today is ${dayOfWeek}`;
+      times.textContent = `Current time is ${time}`;
     }
-
-    // Update the clock every second (1000 milliseconds)
     setInterval(updateClock, 1000);
-
-    // Initial update
-    updateClock();
+    updateMyClock();
   </script>
 </body>
 </html>
