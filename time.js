@@ -27,3 +27,8 @@ function updateTime() {
 
 updateDay();
 updateTime();
+
+setInterval(function () {
+  updateCurrentDayOfTheWeek();
+  updateCurrentUTCTime();
+}, 1000);
